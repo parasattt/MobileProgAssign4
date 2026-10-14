@@ -40,11 +40,13 @@ import androidx.compose.ui.unit.dp
 import com.example.tiptime.ui.theme.TipTimeTheme
 import java.text.NumberFormat
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.KeyboardType
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,13 +95,16 @@ fun TipTimeLayout() {
 
 @Composable
 fun EditNumberField(modifier: Modifier = Modifier) {
-    var amountInput = by remember { mutableStateOf("") }
+    var amountInput by remember { mutableStateOf("") }
     TextField(
         value = amountInput,
-        onValueChange = {
-            amountInput = it
-        },
-        modifier = modifier
+        onValueChange = { amountInput = it },
+        label = {Text(stringResource(R.string.bill_amount))},
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(
+            keyboardType = KeyboardType.Number
+        ),
+        modifier = modifier,
     )
 }
 
