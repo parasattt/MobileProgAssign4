@@ -1,7 +1,9 @@
 package com.example.tiptime
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.rememberScrollState
@@ -12,6 +14,8 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -39,6 +43,20 @@ fun ArtSpace(modifier: Modifier = Modifier) {
             .verticalScroll(rememberScrollState())
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(image),
+            contentDescription = "",
+            modifier = Modifier.fillMaxWidth()
+        )
+
+    }
+}
+
+@Composable
+fun BlockTitleAndArtist(modifier: Modifier = Modifier) {
+    Column(
+
     ) {
     }
 }
