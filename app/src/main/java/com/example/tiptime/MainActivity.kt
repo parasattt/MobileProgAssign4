@@ -19,6 +19,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -84,6 +85,7 @@ fun TipTimeLayout() {
                 .align(alignment = Alignment.Start)
         )
         EditNumberField(
+            label = R.string.bill_amount,
             value = amountInput,
             onValueChange = {
                 amountInput = it
@@ -105,12 +107,12 @@ fun EditNumberField(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
-    label: Int,) {
+    @StringRes label: Int,) {
 
     TextField(
+        label = {Text(stringResource(label))},
         value = value,
         onValueChange = onValueChange,
-        label = {Text(stringResource(label))},
         singleLine = true,
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Number
