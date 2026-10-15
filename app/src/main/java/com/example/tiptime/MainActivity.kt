@@ -115,20 +115,19 @@ fun TipTimeLayout() {
 
 @Composable
 fun EditNumberField(
+    @StringRes label: Int,
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
-    @StringRes label: Int,) {
+    keyboardOptions: KeyboardOptions,
+    ) {
 
     TextField(
         label = {Text(stringResource(label))},
         value = value,
         onValueChange = onValueChange,
         singleLine = true,
-        keyboardOptions = KeyboardOptions.Default.copy(
-            keyboardType = KeyboardType.Number,
-            imeAction = ImeAction.Next
-        ),
+        keyboardOptions = keyboardOptions,
         modifier = modifier,
     )
 }
