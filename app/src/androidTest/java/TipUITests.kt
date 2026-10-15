@@ -26,7 +26,7 @@ class TipUITests {
             }
         }
         composeTestRule.onNodeWithText("Bill Amount").performTextInput("10")
-        composeTestRule.onNodeWithText("Bill Amount").performTextInput("20")
+        composeTestRule.onNodeWithText("Tip Percentage").performTextInput("20")
         composeTestRule.onNode(isToggleable()).performClick()
 
         val tip = NumberFormat.getCurrencyInstance().format(2)
