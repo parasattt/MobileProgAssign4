@@ -21,6 +21,5 @@ fun ArtSpace(modifier: Modifier = Modifier) {
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
     }
 }
