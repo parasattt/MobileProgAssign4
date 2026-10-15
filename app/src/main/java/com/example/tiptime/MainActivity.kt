@@ -69,7 +69,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                 ) {
-                    TipTimeLayout()
+                    ArtSpace()
                 }
             }
         }
