@@ -21,4 +21,13 @@
     <string name="tip_amount">Tip Amount: %s</string>
     <string name="how_was_the_service">Tip Percentage</string>
     <string name="round_up_tip">Round up tip?</string>
+
+    <string name="image1_title">Mountain Encounter</string>
+    <string name="image1_artist">Ethan Cole</string>
+
+    <string name="image2_title">Into the Canopy</string>
+    <string name="image2_artist">Liam Woods</string>
+
+    <string name="image3_title">Alpine Bloom</string>
+    <string name="image3_artist">Noah Bennett</string>
 </resources>
